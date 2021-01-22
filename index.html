@@ -46,20 +46,18 @@
 		<!-- 页面主体部分 -->
 		<section class="mainbox">
 			<div class="column">
-				<div class="panel bar">
-					<h2>柱形图-就业行业</h2>
+				<div class="panel people">
+					<h2>每月新增确诊人数（可缩放）</h2>
 					<div class="chart"></div>
 					<div class="panel-footer"></div>
 				</div>
-				<div class="panel line">
-					<h2>
-						折线图-人员变化 <a href="javacript:;">2020</a><a href="javascript:;">2021</a>
-					</h2>
-					<div class="chart">图表</div>
+				<div class="panel mentality">
+					<h2>公众心态变化</h2>
+					<div class="chart"></div>
 					<div class="panel-footer"></div>
 				</div>
-				<div class="panel pie">
-					<h2>饼形图-年龄分布</h2>
+				<div class="panel resource">
+					<h2>数据分布</h2>
 					<div class="chart">图表</div>
 					<div class="panel-footer"></div>
 				</div>
@@ -70,7 +68,7 @@
 					<div class="no-hd">
 						<ul>
 							<li>xxxxx</li>
-							<li>微博、知乎、b站</li>
+							<li>微博、知乎、b站等</li>
 						</ul>
 					</div>
 					<div class="no-bd">
@@ -80,7 +78,7 @@
 						</ul>
 					</div>
 				</div>
-				<!-- 地图模块 -->
+				<!-- 雷达图模块 -->
 				<div class="rader">
 					<div class="map1"></div>
 					<div class="map2"></div>
@@ -89,14 +87,21 @@
 				</div>
 			</div>
 			<div class="column">
-				<div class="panel bar2">
-					<h2>柱形图-就业行业</h2>
-					<div class="chart">图表</div>
+				<div class="panel patient">
+					<h2>各省累计确诊病例（截至2021-1-22）</h2>
+					<div class="chart"></div>
 					<div class="panel-footer"></div>
 				</div>
-				<div class="panel line2">
-					<h2>折线图-播放量</h2>
-					<div class="chart">图表</div>
+				<div class="panel search">
+					<h2>
+						百度搜索指数
+						<a href="javacript:;" style="color: #ff0c24;">疫情</a>
+						<a href="javacript:;" style="color: #cccccc;">新冠</a>
+						<a href="javacript:;" style="color: #ffffff;">口罩</a> 
+						<a href="javacript:;" style="color: #ff5500;">病例</a> 
+						<a href="javacript:;" style="color: #0000ff;">防疫</a>
+					</h2>
+					<div class="chart"></div>
 					<div class="panel-footer"></div>
 				</div>
 				<div class="panel wordcloud">
@@ -108,7 +113,8 @@
 		</section>
 		<script src="js/flexible.js"></script>
 		<!-- <script src="js/echarts.min.js"></script> -->
-		<script src='https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js'></script>
+		<script src='js/echarts.min.js'></script>
+		<script src='js/china.js'></script>
 		<script src="js/echarts-wordcloud.js"></script>
 		<!-- 先引入jquery -->
 		<script src="js/jquery.js"></script>
