@@ -385,7 +385,7 @@
 		},
 		"title": {
 			"show": true,
-			"text": "数据雷达图",
+			"text": "心态雷达图",
 			"left": "43%",
 			"top": "4%",
 			"textStyle": {
