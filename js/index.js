@@ -399,6 +399,18 @@
 			"show": true,
 			"trigger": "item"
 		},
+		"legend": {
+			"show": true,
+			"icon": "circle",
+			"left": "30%",
+			"top": "90%",
+			"orient": "horizontal",
+			"textStyle": {
+				"fontSize": 14,
+				"color": "#fff"
+			},
+			"data": ["新闻心态", "B站心态"]
+		},
 		"radar": {
 			"center": ["50%", "50%"],
 			"radius": "70%",
@@ -471,29 +483,54 @@
 			}]
 		},
 		"series": [{
-			"name": "每月公众心态变化",
+			"name": "新闻心态",
 			"type": "radar",
 			"symbolSize": 5,
 			"areaStyle": {
 				"normal": {
-					"color": "rgba(245, 166, 35, 0.4)"
+					"color": "rgba(85, 170, 255, 0.4)"
 				}
 			},
 			itemStyle: {
-				color: 'rgba(245, 166, 35, 1)',
-				borderColor: 'rgba(245, 166, 35, 0.3)',
+				color: 'rgba(85, 170, 255, 1)',
+				borderColor: 'rgba(85, 170, 255, 0.3)',
 				borderWidth: 5,
 			},
 			"lineStyle": {
 				"normal": {
 					"type": "dashed",
 
-					"color": "rgba(245, 166, 35, 1)",
+					"color": "rgba(85, 170, 255, 1)",
 					"width": 2
 				}
 			},
 			"data": [
 				[0.51399956, 0.32758926, 0.48901338, 0.52215796, 0.5037439 , 0.54477405, 0.43315286, 0.47047328, 0.43449265, 0.46498034, 0.41780667, 0.34555247, 0.36372761]
+			]
+		}, {
+			"name": "B站心态",
+			"type": "radar",
+			"symbolSize": 5,
+			"areaStyle": {
+				"normal": {
+					"color": "rgba(255, 0, 127, 0.4)"
+				}
+			},
+			itemStyle: {
+				color: 'rgba(255, 0, 127, 1.0)',
+				borderColor: 'rgba(255, 0, 127, 0.3)',
+				borderWidth: 5,
+			},
+			"lineStyle": {
+				"normal": {
+					"type": "dashed",
+
+					"color": "rgba(255, 0, 127, 1)",
+					"width": 2
+				}
+			},
+			"data": [
+				[0.335586544, 0.496327857, 0.400563063, 0.421174299, 0.3724917, 0.326634607, 0.327519093, 0.357841427, 0.314083057, 0.4976509, 0.33432973, 0.416858673, 0.337049106]
 			]
 		}]
 	};
@@ -856,30 +893,49 @@
 	var myChart = echarts.init(document.querySelector(".wordcloud .chart"));
 	
 	var keywords = {
-	  "visualMap": 200,
-	  "continuous": 102,
-	  "contoller": 62,
-	  "series": 27,
-	  "gauge": 123,
-	  "detail": 12,
-	  "piecewise": 48,
-	  "brush": 30,
-	  "visualMa": 200,
-	  "continuus": 102,
-	  "contller": 62,
-	  "seres": 27,
-	  "gage": 123,
-	  "detal": 12,
-	  "pieewise": 48,
-	  "brsh": 30,
-	  "visualap": 200,
-	  "contiuous": 102,
-	  "contoller": 62,
-	  "seres": 27,
-	  "gaue": 123,
-	  "deil": 12,
-	  "piewise": 48,
-	  "brsh": 30
+	  "疫情": 112669, 
+	  "病例": 86933, 
+	  "确诊": 62606, 
+	  "防控": 55406, 
+	  "肺炎": 53387, 
+	  "中国": 45715, 
+	  "新冠": 43698, 
+	  "新增": 37996, 
+	  "工作": 35642, 
+	  "检测": 28022, 
+	  "隔离": 25970, 
+	  "标题": 25572, 
+	  "患者": 25211, 
+	  "医院": 24812, 
+	  "病毒": 24669, 
+	  "人员": 24657, 
+	  "武汉": 23971, 
+	  "输入": 23815, 
+	  "冠状病毒": 23444, 
+	  "新型": 23337, 
+	  "报告": 22528, 
+	  "进行": 22256, 
+	  "累计": 22226, 
+	  "感染": 22010, 
+	  "企业": 20478, 
+	  "国家": 20130, 
+	  "境外": 20009, 
+	  "目前": 19991, 
+	  "出院": 19292, 
+	  "情况": 17404, 
+	  "健康": 17126, 
+	  "北京": 16563, 
+	  "核酸": 16393, 
+	  "口罩": 15448, 
+	  "措施": 15398, 
+	  "表示": 15388, 
+	  "感染者": 15266, 
+	  "无症状": 14554, 
+	  "治疗": 14343, 
+	  "相关": 13902, 
+	  "美国": 13644, 
+	  "出现": 13618, 
+	  "医学观察": 12958, 
 	};
 	
 	var data = [];
@@ -900,7 +956,7 @@
 		    },		
 	    series: [ {
 	        type: 'wordCloud',
-	        sizeRange: [15, 40],
+	        sizeRange: [15, 50],
 	        rotationRange: [-90, 90],
 	        rotationStep: 45,
 	        gridSize: 2,
